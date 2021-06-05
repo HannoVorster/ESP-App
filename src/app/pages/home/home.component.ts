@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   tempData = {};
   humidityData = {};
 
+  // Chart.js options...
   options = {
     scales: {
       yAxes: [{
@@ -30,6 +31,9 @@ export class HomeComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: true
   };
+
+  //Datatables...
+  dtOptions: DataTables.Settings = {};
 
   constructor(private restApi: RestApiService) { }
 
@@ -80,5 +84,39 @@ export class HomeComponent implements OnInit {
         ]
       };
     });
+
+    this.dtOptions = {
+      ajax: {
+        'url': 'https://localhost:443/getweather.php',
+        'type': 'GET',
+        'dataSrc': ""
+      },
+      columns: [
+        {
+          title: 'ID',
+          data: 'id'
+        }, 
+        {
+          title: 'Temp',
+          data: 'temp'
+        }, 
+        {
+          title: 'Humidity',
+          data: 'humidity'
+        },
+        {
+          title: 'Date Time',
+          data: 'datetime'
+        },
+        {
+          title: 'Sensor',
+          data: 'sensor'
+        },
+        {
+          title: 'User',
+          data: 'user'
+        }
+      ]
+    };
   }
 }

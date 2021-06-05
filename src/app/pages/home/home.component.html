@@ -1,16 +1,38 @@
 <div class='container'>
-  <h1>Welcome To ESP Home Page</h1>
   <br>
   <div class='row'>
     <div class='col-6'>
-        <mat-card>
-            <chart height="100" [type]="chartType" [data]="tempData" [options]="options"></chart>
-        </mat-card>       
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Temperature</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <chart height="100" [type]="chartType" [data]="tempData" [options]="options"></chart>
+        </mat-card-content>
+      </mat-card>
     </div>
     <div class='col-6'>
-        <mat-card>
-            <chart height="100" [type]="chartType" [data]="humidityData" [options]="options"></chart>
-        </mat-card>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Humidity</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <chart height="100" [type]="chartType" [data]="humidityData" [options]="options"></chart>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
+
+  <br>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Data Table
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table [dtOptions]='dtOptions' datatable class="table"></table>
+    </mat-card-content>
+  </mat-card>
 </div>

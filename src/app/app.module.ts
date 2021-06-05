@@ -12,7 +12,10 @@ import { ChartModule } from 'angular2-chartjs';
 
 // NG MATERIAL...
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCard, MatCardModule} from '@angular/material/card';
+import {MatCardModule} from '@angular/material/card';
+
+// DATA TABLES...
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {MatCard, MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
-    ChartModule
+    ChartModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
