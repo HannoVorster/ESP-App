@@ -13,14 +13,21 @@ import { ChartModule } from 'angular2-chartjs';
 // NG MATERIAL...
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 // DATA TABLES...
 import { DataTablesModule } from "angular-datatables";
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,11 @@ import { DataTablesModule } from "angular-datatables";
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule,
     ChartModule,
     DataTablesModule
   ],

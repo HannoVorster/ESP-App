@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import { UserLogin } from '../models/user-login';
 import { Weather } from '../models/weather';
 
 @Injectable({
@@ -18,6 +19,14 @@ export class RestApiService {
   };
 
   constructor(private http: HttpClient) { }
+
+  postUserLoginDetails(user: UserLogin) {
+    return this.http.post<UserLogin>(this.apiUrl + 'postlogin.php', user, this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }
 
   getWeatherData() {
     return this.http.get<Weather>(this.apiUrl + 'getweather.php')
