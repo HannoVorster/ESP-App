@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class='container'>
+  <h1>Welcome To ESP Home Page</h1>
+  <br>
+  <div class='row'>
+    <div class='col-6'>
+        <mat-card>
+            <chart height="100" [type]="chartType" [data]="tempData" [options]="options"></chart>
+        </mat-card>       
+    </div>
+    <div class='col-6'>
+        <mat-card>
+            <chart height="100" [type]="chartType" [data]="humidityData" [options]="options"></chart>
+        </mat-card>
+    </div>
+  </div>
+</div>

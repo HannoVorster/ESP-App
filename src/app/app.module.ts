@@ -6,8 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { ChartModule } from 'angular2-chartjs';
+
 // NG MATERIAL...
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCard, MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatCardModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
