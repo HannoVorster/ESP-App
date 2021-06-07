@@ -75,10 +75,10 @@ export class HomeComponent implements OnInit {
             label: "Humidity Data",
             data: this.chartHumidity,
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)'
+              'rgba(54, 162, 235, 0.2)'
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)'
+              'rgba(54, 162, 235, 1)'
             ],
           }
         ]
