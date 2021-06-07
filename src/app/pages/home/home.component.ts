@@ -87,7 +87,7 @@ export class HomeComponent implements OnInit {
 
     this.dtOptions = {
       ajax: {
-        'url': 'https://localhost:443/getweather.php',
+        'url': 'https://hannovorster.co.za/getweather.php',
         'type': 'GET',
         'dataSrc': ""
       },
@@ -98,11 +98,17 @@ export class HomeComponent implements OnInit {
         }, 
         {
           title: 'Temp',
-          data: 'temp'
+          data: 'temp',
+          render: function (data, type, row, meta) {
+            return `${data}°C`;
+          }
         }, 
         {
           title: 'Humidity',
-          data: 'humidity'
+          data: 'humidity',
+          render: function (data, type, row, meta) {
+            return `${data}%`;
+          }
         },
         {
           title: 'Date Time',

@@ -10,7 +10,8 @@ import { Weather } from '../models/weather';
 })
 export class RestApiService {
 
-  apiUrl: string = "https://localhost:443/";
+  //apiUrl: string = "https://localhost:443/Esp-Backend/";
+  apiUrl: string = "https://hannovorster.co.za/";
 
   httpOptions = {
     headers: new HttpHeaders({
