@@ -1,28 +1,35 @@
-<div class='container'>
+<div class='container-fluid'>
 
   <br>
 
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Temperature & Humidity</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <chart height="100" [type]="chartType" [data]="allData" [options]="options"></chart>
+    </mat-card-content>
+  </mat-card>
+  
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Temperature</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <chart height="100" [type]="chartType" [data]="tempData" [options]="options"></chart>
+    </mat-card-content>
+  </mat-card>
 
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Temperature</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <chart height="100" [type]="chartType" [data]="tempData" [options]="options"></chart>
-      </mat-card-content>
-    </mat-card>
+  <br>
 
-    <br>
-
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Humidity</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <chart height="100" [type]="chartType" [data]="humidityData" [options]="options"></chart>
-      </mat-card-content>
-    </mat-card>
-
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Humidity</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <chart height="100" [type]="chartType" [data]="humidityData" [options]="options"></chart>
+    </mat-card-content>
+  </mat-card>
 
   <br>
 
@@ -36,4 +43,5 @@
       <table [dtOptions]='dtOptions' datatable class="table"></table>
     </mat-card-content>
   </mat-card>
+  
 </div>

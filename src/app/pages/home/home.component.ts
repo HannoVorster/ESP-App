@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   chartTemperature: string[] = [];
   chartHumidity: string[] = [];
 
+  allData = {};
   tempData = {};
   humidityData = {};
 
@@ -50,6 +51,28 @@ export class HomeComponent implements OnInit {
         this.chartLabels.push(elem.datetime);
         this.chartTemperature.push(elem.temp);
         this.chartHumidity.push(elem.humidity);
+      }
+
+      this.allData = {
+        labels: this.chartLabels,
+        datasets: [
+          {
+            type: 'line',
+            label: 'Temperatures',
+            data: this.chartTemperature,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: false
+          },
+          {
+            type: 'line',
+            label: 'Humidity',
+            data: this.chartHumidity,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            fill: false
+          }
+        ]
       }
 
       this.tempData = {
