@@ -87,6 +87,7 @@ export class HomeComponent implements OnInit {
             borderColor: [
               'rgba(255, 99, 132, 1)'
             ],
+            fill: false
           }
         ]
       };
@@ -103,6 +104,7 @@ export class HomeComponent implements OnInit {
             borderColor: [
               'rgba(54, 162, 235, 1)'
             ],
+            fill: false
           }
         ]
       };
