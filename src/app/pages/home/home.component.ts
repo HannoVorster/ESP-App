@@ -237,8 +237,8 @@ export class HomeComponent implements OnInit {
 
     this.dtOptions = {
       ajax: {
-        //'url': 'https://hannovorster.co.za/getweather.php',
-        'url': 'http://localhost/ESP-Backend/getweather.php',
+        'url': 'https://hannovorster.co.za/getweather.php',
+        //'url': 'http://localhost/ESP-Backend/getweather.php',
         'type': 'GET',
         'dataSrc': ""
       },
